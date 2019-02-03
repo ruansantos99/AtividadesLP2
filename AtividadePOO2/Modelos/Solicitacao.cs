@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace Atividade1
 {
@@ -100,6 +101,9 @@ namespace Atividade1
                 }
             }
         }
+
+        [Key]
+        public int IdSolicitacao { get; set; }
 
     }
 }

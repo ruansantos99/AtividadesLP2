@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace Atividade1
 {
@@ -17,6 +18,7 @@ namespace Atividade1
             Console.WriteLine("Numero de agencias: " + (agencias.Count-1) + "\n");
         }
 
+        [Key]
         public int IdBanco { get; set; }
 
         public List<Agencia> Agencias { get; }
