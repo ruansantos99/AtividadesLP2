@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static System.Console;
 
 namespace Atividade1
 {
@@ -14,13 +15,13 @@ namespace Atividade1
         public void AdicionarContaCorrente(ContaCorrente cc)
         {
             contas_corrente.Add(cc);
-            Console.WriteLine("Conta ----------> \n" + "Numero: "  + cc.Id + "\n" + "Titular: " + cc.Titular + "\n" + "Conta Criada, Boa sorte\n");
+            WriteLine("Conta ----------> \n" + "Numero: "  + cc.Id + "\n" + "Titular: " + cc.Titular + "\n" + "Conta Criada, Boa sorte\n");
         }
 
         public void AdicionarContaPoupanca(ContaPoupanca cp)
         {
             contas_poupanca.Add(cp);
-            Console.WriteLine("Conta:\n" + "Numero: " + cp.Id + "\n" + "Titular: " + cp.Titular + "\n" + "Conta Criada, Boa sorte\n");
+            WriteLine("Conta:\n" + "Numero: " + cp.Id + "\n" + "Titular: " + cp.Titular + "\n" + "Conta Criada, Boa sorte\n");
         }
 
         public ContaCorrente getCCorrente(int num)
@@ -35,7 +36,7 @@ namespace Atividade1
                 }
             }
 
-            Console.WriteLine("Dados invalidos, verifique se todos os dados estão corretos ou se sua sua conta existe.");
+            WriteLine("Dados invalidos, verifique se todos os dados estão corretos ou se sua sua conta existe.");
             return null;
 
 
@@ -52,7 +53,7 @@ namespace Atividade1
                     return cp;
                 }
             }
-            Console.WriteLine("Dados invalidos, verifique se todos os dados estão corretos ou se sua sua conta existe.");
+            WriteLine("Dados invalidos, verifique se todos os dados estão corretos ou se sua sua conta existe.");
             return null;
 
         }

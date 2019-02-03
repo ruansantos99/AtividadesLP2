@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static System.Console;
 
 namespace Atividade1
 {
@@ -38,6 +39,10 @@ namespace Atividade1
             if(valor <= Saldo)
             {
                 Saldo -= valor;
+            }
+            else
+            {
+                WriteLine("Sua conta não tem saldo suficiente.\n");
             }
         }
 

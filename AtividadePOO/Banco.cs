@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static System.Console;
 
 namespace Atividade1
 {
@@ -13,8 +14,8 @@ namespace Atividade1
         {
     
             agencias.Add(agencia);
-            Console.WriteLine("Agência " + agencia.IdAgencia + " criada com sucesso!");
-            Console.WriteLine("Numero de agencias: " + (agencias.Count-1) + "\n");
+            WriteLine("Agência " + agencia.IdAgencia + " criada com sucesso!");
+            WriteLine("Numero de agencias: " + (agencias.Count-1) + "\n");
         }
 
         public int IdBanco { get; set; }
@@ -32,7 +33,7 @@ namespace Atividade1
                     return ag;
                 }
             }
-            Console.WriteLine("Dados errados ou Agencia existe, tente novamente.\n");
+            WriteLine("Dados errados ou Agencia existe, tente novamente.\n");
             return null;
             
             
@@ -42,7 +43,7 @@ namespace Atividade1
         {
             foreach (var agencia in agencias)
             {
-                Console.WriteLine("Agencia = " + agencia.IdAgencia + "\n");
+                WriteLine("Agencia = " + agencia.IdAgencia + "\n");
             }
         }
 

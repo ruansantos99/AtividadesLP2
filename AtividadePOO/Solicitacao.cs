@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static System.Console;
 
 namespace Atividade1
 {
@@ -8,18 +9,18 @@ namespace Atividade1
     {
        public void realizarSolicitacao(Banco banco)
         {
-            Console.WriteLine("Digite o numero da agência: ");
-            int numAgencia = int.Parse(Console.ReadLine());
+            WriteLine("Digite o numero da agência: ");
+            int numAgencia = int.Parse(ReadLine());
 
-            Console.WriteLine("Digite o tipo da conta: 1 - Corrente/ 2 - Poupança");
-            Console.WriteLine("1 - Corrente:");
-            Console.WriteLine("2 - Poupança:");
-            int tipo_conta = int.Parse(Console.ReadLine());
+            WriteLine("Digite o tipo da conta: 1 - Corrente/ 2 - Poupança");
+            WriteLine("1 - Corrente:");
+            WriteLine("2 - Poupança:");
+            int tipo_conta = int.Parse(ReadLine());
 
             if (tipo_conta == 1)
             {
-                Console.WriteLine("Digite o numero da sua conta: ");
-                int num_conta = int.Parse(Console.ReadLine());
+                WriteLine("Digite o numero da sua conta: ");
+                int num_conta = int.Parse(ReadLine());
                 Agencia agencia = banco.buscaAgencia(numAgencia);
                 if(agencia == null)
                 {
@@ -31,37 +32,37 @@ namespace Atividade1
                     return;
                 }
 
-                Console.WriteLine("Que operação deseja realizar? ");
-                Console.WriteLine("1 - Consultar Saldo:");
-                Console.WriteLine("2 - Sacar:");
-                Console.WriteLine("3 - Depositar:");
-                int operacao = int.Parse(Console.ReadLine());
+                WriteLine("Que operação deseja realizar? ");
+                WriteLine("1 - Consultar Saldo:");
+                WriteLine("2 - Sacar:");
+                WriteLine("3 - Depositar:");
+                int operacao = int.Parse(ReadLine());
 
                 if (operacao == 1)
                 {
-                    Console.WriteLine("Situação da conta:");
-                    Console.WriteLine("Conta = " + cc.Id);
-                    Console.WriteLine("Titular = " + cc.Titular);
-                    Console.WriteLine("Seu saldo é = R$ " + cc.Saldo);
+                    WriteLine("Situação da conta:");
+                    WriteLine("Conta = " + cc.Id);
+                    WriteLine("Titular = " + cc.Titular);
+                    WriteLine("Seu saldo é = R$ " + cc.Saldo);
                 }
                 else if (operacao == 2)
                 {
-                    Console.WriteLine("Sua operação é SAQUE");
-                    Console.WriteLine("Quanto deseja sacar?");
-                    cc.Sacar(decimal.Parse(Console.ReadLine()));
+                    WriteLine("Sua operação é SAQUE");
+                    WriteLine("Quanto deseja sacar?");
+                    cc.Sacar(decimal.Parse(ReadLine()));
 
                 }
                 else if (operacao == 3)
                 {
-                    Console.WriteLine("Sua operação é DEPÓSITO");
-                    Console.WriteLine("Quanto deseja depositar: ");
-                    cc.Depositar(decimal.Parse(Console.ReadLine()));
+                    WriteLine("Sua operação é DEPÓSITO");
+                    WriteLine("Quanto deseja depositar: ");
+                    cc.Depositar(decimal.Parse(ReadLine()));
                 }
             }
             else if (tipo_conta == 2)
             {
-                Console.WriteLine("Digite o numero da conta: ");
-                int num_conta = int.Parse(Console.ReadLine());
+                WriteLine("Digite o numero da conta: ");
+                int num_conta = int.Parse(ReadLine());
                 Agencia agencia = banco.buscaAgencia(numAgencia);
                 if (agencia == null)
                 {
@@ -73,30 +74,30 @@ namespace Atividade1
                     return;
                 }
 
-                Console.WriteLine("Que operação deseja realizar? ");
-                Console.WriteLine("1 - Consultar Saldo:");
-                Console.WriteLine("2 - Sacar:");
-                Console.WriteLine("3 - Depositar:");
-                int operacao = int.Parse(Console.ReadLine());
+                WriteLine("Que operação deseja realizar? ");
+                WriteLine("1 - Consultar Saldo:");
+                WriteLine("2 - Sacar:");
+                WriteLine("3 - Depositar:");
+                int operacao = int.Parse(ReadLine());
 
                 if (operacao == 1)
                 {
-                    Console.WriteLine("Situação da conta:");
-                    Console.WriteLine("Conta = " + cp.Id);
-                    Console.WriteLine("Titular = " + cp.Titular);
-                    Console.WriteLine("Seu saldo é = R$ " + cp.Saldo);
+                    WriteLine("Situação da conta:");
+                    WriteLine("Conta = " + cp.Id);
+                    WriteLine("Titular = " + cp.Titular);
+                    WriteLine("Seu saldo é = R$ " + cp.Saldo);
                 }
                 else if (operacao == 2)
                 {
-                    Console.WriteLine("Sua operação é SAQUE");
-                    Console.WriteLine("Quanto deseja saque: ");
-                    cp.Sacar(decimal.Parse(Console.ReadLine()));
+                    WriteLine("Sua operação é SAQUE");
+                    WriteLine("Quanto deseja saque: ");
+                    cp.Sacar(decimal.Parse(ReadLine()));
                 }
                 else if (operacao == 3)
                 {
-                    Console.WriteLine("Sua operação é DEPÓSITO");
-                    Console.WriteLine("Quanto deseja depositar: ");
-                    cp.Depositar(decimal.Parse(Console.ReadLine()));
+                    WriteLine("Sua operação é DEPÓSITO");
+                    WriteLine("Quanto deseja depositar: ");
+                    cp.Depositar(decimal.Parse(ReadLine()));
                 }
             }
         }
